@@ -1,9 +1,13 @@
 
 LAMBDA_TEST?=./node_modules/node-lambda/bin/node-lambda
-LAMBDA_FUNCTION_NAME=
-AWS_REGION=
-AWS_ROLE=
-AWS_PROFILE=
+LAMBDA_FUNCTION_NAME=cloudwatch-to-slack
+AWS_REGION=ap-southeast-2
+AWS_ROLE=arn:aws:iam::447351447783:role/lambda_basic_execution
+AWS_PROFILE=default
+# Also update production env in .env file
+AWS_ENVIRONMENT=production
+AWS_ACCESS_KEY_ID=
+AWS_ACCESS_KEY_SECRET=
 
 all:
 	npm build

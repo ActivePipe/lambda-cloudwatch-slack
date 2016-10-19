@@ -288,7 +288,8 @@ var processEvent = function(event, context) {
     slackMessage = handleAutoScaling(event, context);
   }
   else{
-    context.fail("no matching processor for event");
+    console.log("processing cloudwatch notification");
+    slackMessage = handleCloudWatch(event,context);
   }
 
   postMessage(slackMessage, function(response) {
